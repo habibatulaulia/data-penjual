@@ -26,6 +26,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// scrip menampilkan data
 export async function ambilDaftarPenjual() {
   const refDokumen = collection(db, "penjual");
   const kueri = query(refDokumen, orderBy("nama"));
